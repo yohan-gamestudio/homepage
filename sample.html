@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndieHub | Independent Gaming Frontier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2877f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 20px rgba(40, 119, 246, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2 group" href="#">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">IndieHub</span>
+</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-lg">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-slate-100 dark:bg-slate-800/50 border-none rounded-full text-sm focus:ring-2 focus:ring-primary/50 w-64 transition-all" placeholder="프로젝트 검색..." type="text"/>
+</div>
+<button class="flex items-center justify-center p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-9 rounded-full bg-primary/20 border border-primary/30 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu0lZzI-f3sNDdfur0pWiHut4qE7hqveXGYgVSBjiZhENj4RRA6elLfDrG5Ar5T-mIQcDuypCM2e9qHmTYVSyaKMD_whkp50oGZkOx7WOzj0RtZOBxBd_dmf_XuNFh00WaSTnVYBDJjJ5NOewShmdkRXW5LnxC0CPAs2RTdqj6Wpnt6FcqG_i_BxtJpNL398q3_KFYJJ2nsk2UeRbOemHL7OUR0syt4gxDUVgNBjS3H-xFm6UWLoXV12Ic5VM07mYlsvC2DN_mdLI"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pb-24">
+<!-- Hero Section -->
+<section class="md:py-24 flex flex-col items-center text-center max-w-3xl mx-auto"><h2 class="text-xl font-semibold text-slate-900 dark:text-white">추천 게임</h2></section>
+<!-- Filters/Tabs -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-10 border-b border-slate-200 dark:border-slate-800 pb-4">
+<div class="flex gap-1 p-1 bg-slate-100 dark:bg-slate-800/50 rounded-lg">
+<button class="px-4 py-1.5 text-sm font-medium rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm">모든 게임</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">인기</button>
+<button class="px-4 py-1.5 text-sm font-medium rounded-md text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors">최신</button>
+</div>
+<button class="flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">filter_list</span> 상세 필터</button>
+</div>
+<!-- Game Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1: Neon Nights -->
+<div class="group flex flex-col bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden card-hover transition-all duration-300 cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Neon Nights Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Futuristic cyberpunk city with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZC6-szSzRV-2EcjsHGfyOnhdfqLuFWNpCNdUiuFgETIL8WOck6NVbeFDiN3hvCRKQqUWa0ijpSLw3CWUvJ9Ms19rHlQO95pEpsgNQBY8LtChVvaJFn2yFHjTHGNWHRJjOiJtEVWTWWmcu_31OOFFMUKCarNEyqAsaLQi1EzzBbTrzUZI1Ui2dfTFcPQigXUYa1aHkMbMiFGUoMHviZaatOsIPh9J38wxGfWBkwUaNYG1sj3OLHN9t6XSZ1v2XmYSq3Caf7N6kC0U"/>
+<div class="absolute top-3 left-3 top-2 left-2">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-medium">개발 중</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">네온 나이츠 (Neon Nights)</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">고속 사이버펑크 플랫폼 게임으로, 박진감 넘치는 파쿠르와 강렬한 레트로웨이브 사운드트랙을 경험해 보세요.</p>
+</div>
+</div>
+<!-- Card 2: Shadow of the Forest -->
+<div class="group flex flex-col bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden card-hover transition-all duration-300 cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Shadow of the Forest Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Mysterious deep green forest with sunlight filtering through trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mS1fzvgMUjGGEc2gpUjWv7BpPi8qblIn6rKMoVxlxMGAcf1EXpCEADDg5BCVIT-c4AcxNGm5XBwiw3JAoKSQXH4z21W3z8OPhGaCvQIsCpVqfwSn4DTs8O2zeyvItpQhGhOutTACvZkI1lsaN444yyk_QDr3x6OPDpzmFQWIqdZOXKa6KMc7eq4rcmkk2hpNfZ6KL90rOxNnE1n0Yv0T-gQDqh2i7P2FBvpXYueE8OB9XGW4gqdAoDaM-1OIx01C32I9vw2hYjc"/>
+<div class="absolute top-3 left-3 top-2 left-2">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-medium">출시됨</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">숲의 그림자 (Shadow of the Forest)</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">깊은 숲속의 몽환적인 탐험. 고대의 비밀을 파헤치고 밤의 속삭임 속에서 살아남으세요.</p>
+</div>
+</div>
+<!-- Card 3: Pixel Odyssey -->
+<div class="group flex flex-col bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden card-hover transition-all duration-300 cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Pixel Odyssey Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Colorful pixel art space landscape with stars" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1TJgZk5tJh3EJPj-qOUJGO9zK_q6ZtVtNftzPT0dRem5YB3XWmY1rdad0b5Kn4HWZS1Y7CrEvg9HTWoahvQAj4ycS8P4AhpQCu01Zx4CeMAwqY817KzPE7SF42pLfHkke2fxS7ObxIyoec21phn9SEGQMnJP6y1usL8OB9bJG3EqK-82Bu4jepYB8vfc9RDBQ6WOq0tIoRGx1iadsJTvY8OPYON26MVJoTZrF50S5B_NzDn9PI2ebiZoY4NYBH10aNzg7DnT50lk"/>
+<div class="absolute top-3 left-3 top-2 left-2">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sky-500/10 text-sky-500 border border-sky-500/20 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-medium">데모</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">픽셀 오디세이 (Pixel Odyssey)</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">방대한 레트로 스타일의 우주 RPG. 은하계를 탐험하고, 함선을 개조하며 외계 문명과 교역하세요.</p>
+</div>
+</div>
+<!-- Card 4: Echoes of Eternity -->
+<div class="group flex flex-col bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden card-hover transition-all duration-300 cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Echoes Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Abstract mystical portal with swirling cosmic energy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmkNhbqIphJ-ApLghrdgpv94xU-Fw8LLXEDFJ8_S8XgwGbFYS110p1qiMQg8aLMz2DASIHut4ZsSyVcHv4OBoJgZY2MqJ51csYGfLD0t2nm0FyQtqK1ig3tmF8YQrfdJS0aXPKczGmbDy9b7-EL3ennNEnsnTIcr0tvXZOz_KEcKlYz3kEJ1nbLql1kSelDi_GeFO6I3NOCWRzquubO5GboKPpWD6obmGTvphuZz2qwOgVBYGIHI3FTF1V94c8OqcovWG9bk990ag"/>
+<div class="absolute top-3 left-3 top-2 left-2">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-500 border border-amber-500/20 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-medium">개발 중</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">영원의 메아리 (Echoes of Eternity)</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">시간이 유일한 자원인 턴제 전략 게임입니다. 현실을 뒤틀어 적보다 앞서나가세요.</p>
+</div>
+</div>
+<!-- Card 5: Void Runner -->
+<div class="group flex flex-col bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden card-hover transition-all duration-300 cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Void Runner Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dark futuristic sci-fi racing tunnel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd383XP1hQMsq2eDBcMTZobObH5OZVEhvLjyU7oIfMquQqXeKJA0HDPtFBD2TjQXLPuo0-c-VpryqhPrLfksaXYNfDveBuyZnPp5idUNkJRtlLFKCvLkGo3yEuDM3QXEDJadwBpxwxciW9KRro4zCLqLBYSE3OXyL1h5OrTzkJD8PNHgqIZJ8qPA1VjNi2zY04Tro8FKnVn8Un40VgtFzWrkadCtlxZqV9JZUyItF54_ABY98vtc91OpnM5SDkVpVcE8PLYyRRYZI"/>
+<div class="absolute top-3 left-3 top-2 left-2">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-medium">출시됨</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">보이드 러너 (Void Runner)</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">초고속 무중력 레이싱. 물리 법칙을 거스르며 태양계 전역의 중력 궤도에서 경쟁하세요.</p>
+</div>
+</div>
+<!-- Card 6: Mana Garden -->
+<div class="group flex flex-col bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden card-hover transition-all duration-300 cursor-pointer">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Mana Garden Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Peaceful magical garden with glowing flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzznpb-2gh-Kh2krX_iyTrwkfiQ7zSlW3kLlDahYn5Yq8o6wkrtPfa0cMpUKmY1mkAr_4KJ4S6_JeheT9Pxwhsfv9_bWrYZ7ysq2A_rDzkQiOheOEGslSmY_cs9nI3QsogIrbc-kVkhHMWTipi4OVXxU2Q2aKm8-KlQwJ6WiybddvEMkDOXm3o25UwSMnbQHvlamn5hKpi-J-gcBbRJfm4tckuJ6G8J4nYRZbMAhziYINBEFT3oMMavq6vPb4U-nJvQF4gASmeokA"/>
+<div class="absolute top-3 left-3 top-2 left-2">
+<span class="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-sky-500/10 text-sky-500 border border-sky-500/20 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-medium">데모</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">마나 가든 (Mana Garden)</h3>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">아늑한 연금술 테마의 농장 시뮬레이션. 포션을 제조하고 마을 사람들을 도우며 하늘 정원에서 신비한 식물을 키워보세요.</p>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-16 flex justify-center">
+<button class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-semibold rounded-lg transition-all flex items-center gap-2">더 많은 게임 보기 <span class="material-symbols-outlined">expand_more</span></button>
+</div>
+</main>
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-12">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+</div>
+<span class="font-bold text-slate-900 dark:text-white">IndieHub</span>
+<span class="text-sm text-slate-500 ml-2">© 2024</span>
+</div>
+<nav class="flex items-center gap-8">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">소개</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">문의</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">이용약관</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="size-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-primary transition-colors" href="#">
+<svg class="size-4 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+</a>
+<a class="size-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-primary transition-colors" href="#">
+<svg class="size-4 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
